@@ -1,0 +1,6 @@
+from typing import Protocol
+
+class RepositorioLivraria(Protocol):
+    """Contrato do núcleo. Nenhuma tecnologia de armazenamento é exigida aqui."""
+    def carregar(self) -> dict: ...
+    def salvar(self, dados: dict) -> None: ...
